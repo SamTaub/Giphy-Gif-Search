@@ -30,6 +30,20 @@ function createGif (){
         method: "GET"
     }).then(function(response) {
         console.log(response);
+
+        for (let i = 0; i<response.data.length; i++){
+        
+        let gifRating = JSON.stringify(response.data[i].rating);
+        let rating = $("<p>").text("rating: " + gifRating);
+
+        let gifURL = response.data[i].images.downsized_small.mp4;
+        let getGif = $("<img>").attr('src', gifURL);
+        
+        $("#gif-container").prepend(getGif);
+        $("#gif-container").prepend(rating);
+        };
+
+
     });
 };
 
