@@ -36,7 +36,7 @@ function createGif (){
         let gifRating = JSON.stringify(response.data[i].rating);
         let rating = $("<p>").text("rating: " + gifRating);
 
-        let gifURL = response.data[i].images.downsized_small.mp4;
+        let gifURL = response.data[i].images.downsized.url;
         let getGif = $("<img>").attr('src', gifURL);
         
         $("#gif-container").prepend(getGif);
