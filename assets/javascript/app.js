@@ -25,7 +25,7 @@ function createGif() {
 
     let gif = $(this).attr("data-name");
     let apiKey = "MVW6VrC0Lj9n9Rp8wg8TOVl2We174UvH";
-    let queryURL = "http://api.giphy.com/v1/gifs/search?q=" + gif + "&api_key=" + apiKey + "&limit=10";
+    let queryURL = "https://api.giphy.com/v1/gifs/search?q=" + gif + "&api_key=" + apiKey + "&limit=10";
 
     $.ajax({
         url: queryURL,
